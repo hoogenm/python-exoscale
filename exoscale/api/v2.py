@@ -92,7 +92,7 @@ def _sleep(start_time):
     return time.sleep(interval)
 
 
-with open(Path(__file__).parent.parent / "openapi.json", "r") as f:
+with open(Path(__file__).parent.parent / "openapi.json", "r", encoding="utf-8") as f:
     api_spec = json.load(f)
     BaseClient = create_client_class(api_spec)
 
